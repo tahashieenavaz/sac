@@ -1,6 +1,9 @@
 import torch
+import warnings
 from utils import make_environment
 from homa.rl import SoftActorCritic
+
+warnings.filterwarnings("ignore")
 
 env = make_environment("BipedalWalker-v3")
 algorithm = SoftActorCritic(state_dimension=24, action_dimension=4)
