@@ -16,7 +16,7 @@ for episode in range(1000):
         state = torch.tensor(state).float().unsqueeze(0)
         action, probability = algorithm.actor.sample(state)
         next_state, reward, truncated, terminated, _ = env.step(
-            action.detach().cpu().numpy()
+            action.squeeze(0).detach().cpu().numpy()
         )
         algorithm.buffer.record(
             state=state,
