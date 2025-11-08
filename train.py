@@ -1,4 +1,3 @@
-import torch
 import warnings
 from utils import make_environment
 from homa.rl import SoftActorCritic
