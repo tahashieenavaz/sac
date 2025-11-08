@@ -13,7 +13,6 @@ for episode in range(1000):
     state, _ = env.reset()
 
     while not done:
-        state = torch.tensor(state).float().unsqueeze(0)
         action, probability = algorithm.actor.sample(state)
         next_state, reward, truncated, terminated, _ = env.step(
             action.squeeze(0).detach().cpu().numpy()
@@ -26,6 +25,7 @@ for episode in range(1000):
             termination=done,
             probability=probability,
         )
+        state = next_state
 
     algorithm.train()
 
