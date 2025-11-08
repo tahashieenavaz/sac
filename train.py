@@ -24,6 +24,7 @@ for episode in range(1000):
             termination=done,
             probability=probability,
         )
+        done = truncated or terminated
         state = next_state
 
     algorithm.train()
