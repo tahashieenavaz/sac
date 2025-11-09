@@ -29,8 +29,8 @@ for episode in range(settings("episodes")):
         done = truncated or terminated
         state = next_state
         episode_reward += reward
+        algorithm.train()
 
-    algorithm.train()
     print(
         f"episode: {episode}, reward: {episode_reward}, buffer: {algorithm.buffer.size}",
         flush=True,
