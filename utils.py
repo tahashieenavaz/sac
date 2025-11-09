@@ -1,9 +1,11 @@
 import gymnasium
 
 
+def episode_trigger(episode: int):
+    return episode == 0 or (episode + 1) % 50 == 0
+
+
 def make_environment(name: str):
     env = gymnasium.make(name, render_mode="rgb_array")
-    env = gymnasium.wrappers.RecordVideo(
-        env, "./videos", lambda episode: episode % 50 == 0
-    )
+    env = gymnasium.wrappers.RecordVideo(env, "./videos", episode_trigger)
     return env
