@@ -5,7 +5,7 @@ from homa import settings
 
 warnings.filterwarnings("ignore")
 
-env = make_environment("BipedalWalker-v3")
+env = make_environment(settings("environment"))
 algorithm = SoftActorCritic(state_dimension=24, action_dimension=4)
 
 for episode in range(settings("episodes")):

@@ -1,3 +1,4 @@
 {
-  "episodes": 3000
+  "episodes": 3000,
+  "environment": "BipedalWalker-v3"
 }
