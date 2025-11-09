@@ -1,13 +1,14 @@
 import warnings
 from utils import make_environment
 from homa.rl import SoftActorCritic
+from homa import settings
 
 warnings.filterwarnings("ignore")
 
 env = make_environment("BipedalWalker-v3")
 algorithm = SoftActorCritic(state_dimension=24, action_dimension=4)
 
-for episode in range(1000):
+for episode in range(settings("episodes")):
     done = False
     episode_reward = 0.0
     state, _ = env.reset()
