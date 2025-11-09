@@ -31,6 +31,9 @@ for episode in range(settings("episodes")):
         episode_reward += reward
 
     algorithm.train()
-    print(f"episode: {episode}, reward: {episode_reward}", flush=True)
+    print(
+        f"episode: {episode}, reward: {episode_reward}, buffer: {algorithm.buffer.size}",
+        flush=True,
+    )
 
 env.close()
