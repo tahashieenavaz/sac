@@ -4,7 +4,9 @@ from homa import settings
 
 
 env = make_environment(settings("environment"))
-algorithm = SoftActorCritic(state_dimension=24, action_dimension=4)
+algorithm = SoftActorCritic(
+    state_dimension=24, action_dimension=4, buffer_capacity=100_000
+)
 
 for episode in range(settings("episodes")):
     done = False
@@ -28,9 +30,10 @@ for episode in range(settings("episodes")):
         state = next_state
         episode_reward += reward
         algorithm.train()
+        algorithm.tick()
 
     print(
-        f"episode: {episode}, reward: {episode_reward}, buffer: {algorithm.buffer.size}",
+        f"episode: {episode}, reward: {episode_reward}, t: {algorithm.t}",
         flush=True,
     )
 
