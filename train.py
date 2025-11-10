@@ -5,7 +5,7 @@ from homa import settings
 
 env = make_environment(settings("environment"))
 algorithm = SoftActorCritic(
-    state_dimension=24, action_dimension=4, buffer_capacity=100_000
+    state_dimension=24, action_dimension=4, buffer_capacity=1_000_000
 )
 
 for episode in range(settings("episodes")):
