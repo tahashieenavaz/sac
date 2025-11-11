@@ -18,6 +18,7 @@ for episode in range(settings("episodes")):
         next_state, reward, truncated, terminated, _ = env.step(
             action.squeeze(0).detach().cpu().numpy()
         )
+        reward *= settings("reward_scale")
         done = truncated or terminated
         algorithm.buffer.record(
             state=state,

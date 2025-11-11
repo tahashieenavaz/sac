@@ -1,4 +1,5 @@
 {
   "episodes": 3000,
-  "environment": "BipedalWalker-v3"
+  "environment": "BipedalWalker-v3",
+  "reward_scale": 5
 }
