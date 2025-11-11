@@ -34,7 +34,7 @@ for episode in range(settings("episodes")):
         algorithm.tick()
 
     print(
-        f"episode: {episode}, reward: {episode_reward}, t: {algorithm.t}",
+        f"episode: {episode}, reward: {episode_reward}, t: {algorithm.t}, alpha: {algorithm.temperature.log_alpha.item()}",
         flush=True,
     )
 
