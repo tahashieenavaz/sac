@@ -26,7 +26,7 @@ for episode in range(settings("episodes")):
         algorithm.buffer.record(
             state=state,
             next_state=next_state,
-            action=action.squeeze(0).detach().cpu().numpy(),
+            action=action,
             reward=reward,
             termination=done,
         )
