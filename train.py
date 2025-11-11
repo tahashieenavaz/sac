@@ -14,7 +14,11 @@ for episode in range(settings("episodes")):
     state, _ = env.reset()
 
     while not done:
-        action, probability = algorithm.actor.sample(state)
+        if algorithm.is_warmup():
+            action = env.action_space.sample()
+        else:
+            action, _ = algorithm.actor.sample(state)
+
         next_state, reward, truncated, terminated, _ = env.step(
             action.squeeze(0).detach().cpu().numpy()
         )
@@ -26,7 +30,6 @@ for episode in range(settings("episodes")):
             action=action.squeeze(0).detach().cpu().numpy(),
             reward=reward,
             termination=done,
-            probability=probability.squeeze(0).detach().cpu().numpy(),
         )
         state = next_state
         episode_reward += reward
