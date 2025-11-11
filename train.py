@@ -20,7 +20,7 @@ for episode in range(settings("episodes")):
             action, _ = algorithm.actor.sample(state)
             action = action.squeeze(0).detach().cpu().numpy()
 
-        next_state, reward, truncated, terminated, _ = env.step()
+        next_state, reward, truncated, terminated, _ = env.step(action)
         reward *= settings("reward_scale")
         done = truncated or terminated
         algorithm.buffer.record(
