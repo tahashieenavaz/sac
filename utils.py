@@ -2,7 +2,7 @@ import gymnasium
 
 
 def episode_trigger(episode: int):
-    return episode == 0 or (episode + 1) % 50 == 0
+    return episode == 0 or (episode + 1) % 25 == 0
 
 
 def make_environment(name: str):
