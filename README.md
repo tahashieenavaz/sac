@@ -10,16 +10,18 @@
 
 ### Alpha
 
-<table align="center">
-  <tr>
-    <td>
-        <img src="./media/charts/alphas-log.png" width="350" />
-    </td>
-    <td>
-        <img src="./media/charts/alphas-cropped.png" width="350" />
-    </td>
-  </tr>
-</table>
+<p align="center">
+    <table>
+        <tr>
+        <td>
+            <img src="./media/charts/alphas-log.png" width="350" />
+        </td>
+        <td>
+            <img src="./media/charts/alphas-cropped.png" width="350" />
+        </td>
+        </tr>
+    </table>
+</p>
 
 ## Videos
 
