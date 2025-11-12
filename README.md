@@ -21,13 +21,13 @@
 ## Videos
 
 <p align="center">
-    <img src="./media/episode-0.gif" width="600" />
+    <img src="./media/episode-1.gif" width="600" />
 </p>
 
 The first try in which agent chooses actions uniformly at random to enhance the starting point of the buffer. This is done using `action = env.action_space.sample()`.
 
 <p align="center">
-    <img src="./media/episode-2924.gif" width="600" />
+    <img src="./media/episode-2925.gif" width="600" />
 </p>
 
 Episode 2925, which has clearly shown that the agent has learned how to walk and doge some edge cases like getting stuck on a small obstacle.
