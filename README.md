@@ -11,11 +11,11 @@
 ### Alpha
 
 <p align="center">
-    <img src="./media/alpha-log.png" width="600" />
+    <img src="./media/alphas-log.png" width="600" />
 </p>
 
 <p align="center">
-    <img src="./media/alpha-cropped.png" width="600" />
+    <img src="./media/alphas-cropped.png" width="600" />
 </p>
 
 ## Videos
